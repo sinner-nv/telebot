@@ -2,7 +2,10 @@ import telebot
 from telebot import types
 
 
-bot = telebot.TeleBot('1706248688:AAH-WpEGiGEtKG3oHddiHEzwbcDB53FE_MA')
+TOKEN = None
+with open('token.txt', 'r') as file:
+    TOKEN=file.read().strip()
+bot = telebot.TeleBot(TOKEN)
 
 
 def list_ofd(ofd_name):
