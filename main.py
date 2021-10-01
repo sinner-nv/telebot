@@ -69,14 +69,14 @@ def get_ofd(message):
 @bot.callback_query_handler(func=lambda call: True)
 def callback_worker(call):
     set_ofd = list_ofd(call.data)
-    msg_taxcom = 'Название: {0}\n' \
-                 'ИНН:           {1}\n' \
-                 'IP адрес ОФД:    {2}\n' \
-                 'DNS имя ОФД:   {3}\n' \
-                 'Порт ОФД:          {4}\n' \
-                 'EMAIL:        {5} ' \
-                 'DNS имя КМ:          {6}\n' \
-                 'Порт ОФД:        {7} '.format(set_ofd[0], set_ofd[1], set_ofd[2], set_ofd[3], set_ofd[4], set_ofd[5], set_ofd[6], set_ofd[7])
+    msg_taxcom = 'Название:       {0}\n' \
+                 'ИНН:                {1}\n' \
+                 'IP адрес ОФД:   {2}\n' \
+                 'DNS имя ОФД:  {3}\n' \
+                 'Порт ОФД:     {4}\n' \
+                 'EMAIL:            {5} ' \
+                 'DNS имя КМ:         {6}\n' \
+                 'Порт ОФД:       {7} '.format(set_ofd[0], set_ofd[1], set_ofd[2], set_ofd[3], set_ofd[4], set_ofd[5], set_ofd[6], set_ofd[7])
     bot.send_message(call.message.chat.id, msg_taxcom)
 
 
